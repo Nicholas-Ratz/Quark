@@ -1,6 +1,6 @@
 # Quark Library
 
-**Version:** 1.1.0
+**Version:** 1.2.0
 **Language:** C++ (C++98 and later)
 **Type:** Header-only Plugin for Atom Framework
 
@@ -418,17 +418,3 @@ Part of the **Atom framework** plugin ecosystem. Consult the Atom documentation 
 #    define ATOM_CARRIES_DEPENDENCY
 #endif
 ```
-
-## Troubleshooting
-
-### Issue: Undefined symbols in Quark::BitOps namespace
-- **Cause:** Quark headers not in include path or namespace not used
-- **Solution:** Add `Include/` to compiler include paths and use `#include <Quark/BitOperations.h>` with `using namespace Quark::BitOps;` or call functions as `Quark::BitOps::ctz32(value)`
-
-### Issue: Incorrect endianness conversion results
-- **Cause:** Not including system detection headers or platform detection failing
-- **Solution:** Include `Quark/System.h` which detects platform endianness, or check that `ATOM_LITTLE_ENDIAN` or `ATOM_BIG_ENDIAN` are properly defined
-
-### Issue: Getting compiler errors in bit operations
-- **Cause:** Potentially incompatible compiler or architecture not fully supported
-- **Solution:** The generic fallback should work on any platform. Check that compiler is C++98 compatible at minimum

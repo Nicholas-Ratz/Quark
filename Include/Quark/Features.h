@@ -78,7 +78,8 @@
 
 /** Check for C++ standard attributes (e.g., [[nodiscard]]). */
 #if defined(__has_cpp_attribute)
-#    define ATOM_HAS_CPP_ATTRIBUTE(x) __has_cpp_attribute(x) < ATOM_CXX_STANDARD
+#    define ATOM_HAS_CPP_ATTRIBUTE(x)                                                              \
+        (__has_cpp_attribute(x) < ATOM_CXX_STANDARD) && (__has_cpp_attribute(x) != 0)
 #else
 #    define ATOM_HAS_CPP_ATTRIBUTE(x) 0
 #endif

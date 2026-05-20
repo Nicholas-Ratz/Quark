@@ -11,7 +11,7 @@ list(APPEND CMAKE_MODULE_PATH
 include(AtomFunctions REQUIRED)
 Atom_SetupCompileCommands(SYMLINK)
 
-project(Quark LANGUAGES CXX VERSION 1.1.0)
+project(Quark LANGUAGES CXX VERSION 1.2.0)
 add_library(Quark OBJECT
     Testing.cpp
 )

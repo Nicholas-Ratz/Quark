@@ -5,8 +5,8 @@
  * @file Extensions.h
  * @brief Facade for compiler-specific extension macros (attributes & keywords).
  *
- * Chooses a compiler-specific `Extensions/Attributes/*` and
- * `Extensions/Keywords/*` implementation based on detected compiler family.
+ * Chooses a compiler-specific `Extensions/Attributes/` and
+ * `Extensions/Keywords/` implementation based on detected compiler family.
  */
 
 #include "System/Compiler.h"
